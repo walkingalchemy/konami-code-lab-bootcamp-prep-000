@@ -9,6 +9,7 @@ function init() {
 
     if (key === code[index]) {
       i++
+      console.log('${e.which} : ${i}')
       if (index === code.length) {
         alert("+30 Lives!")
         index = 0
