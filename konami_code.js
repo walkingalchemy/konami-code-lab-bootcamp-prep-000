@@ -18,6 +18,6 @@ function init() {
       index = 0
     }
   }
-  input.addEventListner('keydown', onKeyDownHandler(e))
+  input.addEventListner('keydown', onKeyDownHandler)
 }
 init()
