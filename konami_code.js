@@ -8,7 +8,7 @@ function init() {
     const key = parseInt(e.detail || e.which);
 
     if (key === code[index]) {
-      i++
+      index++
       console.log('${e.which} : ${i}')
       if (index === code.length) {
         alert("+30 Lives!")
@@ -18,6 +18,6 @@ function init() {
       index = 0
     }
   }
-  input.addEventListner('keydown', onKeyDownHandler)
+  input.addEventListener('keydown', onKeyDownHandler)
 }
 init()
