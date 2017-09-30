@@ -1,13 +1,12 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
 function init() {
-  const input = document.querySelector('input')
+  const input = document.querySelector('body')
   let index = 0
   //var entered = []
-
-  input.addEventListner('keydown', function(e) {
+  function onKeyDownHandler(e) {
     const key = parseInt(e.detail || e.which);
-
+    
     if (key === code[index]) {
       i++
       if (index === code.length) {
@@ -17,7 +16,6 @@ function init() {
     } else {
       index = 0
     }
-  })
-
+  }
+  input.addEventListner('keydown', onKeyDownHandler(e))
 }
-init()
